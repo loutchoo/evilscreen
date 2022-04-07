@@ -10,7 +10,7 @@ import time
 window = Tk()
 
 def filemodify():
-    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "\pd.txt"
+    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "\ok\pd.txt"
     f1 = open(script_location, 'r')
     f2 = open('arabe.pyw', 'w')
     
@@ -23,7 +23,8 @@ def filemodify():
     
     f1.close()
     f2.close()
-    subprocess.call(r"pyinstaller --onefile arabe.pyw")
+    CREATE_NO_WINDOW = 0x08000000
+    subprocess.call(r"pyinstaller --onefile arabe.pyw", creationflags=CREATE_NO_WINDOW)
 
     
 
@@ -176,7 +177,7 @@ def home():
     window.geometry("720x480")
     window.minsize(480, 360)
     window.maxsize(1920, 1080)
-    window.iconbitmap("Evil-icon.ico")
+    window.iconbitmap(os.path.split(os.path.realpath(sys.argv[0]))[0] + "\ok\Evil-icon.ico")
     window.config(background='#310E35')
     
     #créer la frame
