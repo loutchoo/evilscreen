@@ -2,6 +2,7 @@
 
 
 A new builder to create a evil executable program that will take screenshots every wanted seconds on a victim computer, sending them on a ftp server.
+Made with tkinter, using pyinstaller.
 
 ![image](https://user-images.githubusercontent.com/63863060/162635818-77cee8e3-f815-4719-95c2-524e0e59a61e.png)
 
