@@ -6,6 +6,9 @@ A new builder to create a evil executable program that will take screenshots eve
 ![image](https://user-images.githubusercontent.com/63863060/162635818-77cee8e3-f815-4719-95c2-524e0e59a61e.png)
 
 
+![image](https://user-images.githubusercontent.com/63863060/162635902-cff6d72d-3b1d-4c6a-b056-0ff4f9ebd39e.png)
+
+
 ![image](https://user-images.githubusercontent.com/63863060/162635860-a050bc67-be1a-4efc-86d6-49ed4b218d11.png)
 
 
@@ -23,9 +26,13 @@ pip install -r requirements.txt
 
 
 + (to be 100% sure)
+
 pip install pathlib
+
 pip install ftplib
+
 pip install shutil
+
 pip install getpass
 
 
