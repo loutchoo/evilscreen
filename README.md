@@ -3,6 +3,14 @@
 
 A new builder to create a evil executable program that will take screenshots every wanted seconds on a victim computer, sending them on a ftp server.
 
+![image](https://user-images.githubusercontent.com/63863060/162635818-77cee8e3-f815-4719-95c2-524e0e59a61e.png)
+
+
+![image](https://user-images.githubusercontent.com/63863060/162635860-a050bc67-be1a-4efc-86d6-49ed4b218d11.png)
+
+
+![image](https://user-images.githubusercontent.com/63863060/162635850-6f0e822f-17fc-4211-8b53-ea6fce2e41bf.png)
+
 
 # Pre-needs
 
@@ -33,6 +41,10 @@ build it using your ftp server credentials
 
 
 The program has 0 detections by anti-viruses which is kinda cool.
+
+
+![image](https://user-images.githubusercontent.com/63863060/162635835-fd4251e9-3590-4494-8632-2240900b5833.png)
+
 
 
 # Project used
