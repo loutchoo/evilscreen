@@ -39,7 +39,7 @@ pip install getpass
 # How to make it work
 
 
-python evilscreen.py
+python evilscreen.py or compile it as an executable using pyinstaller --onefile evilscreen.py
 
 build it using your ftp server credentials
 
