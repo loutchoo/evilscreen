@@ -47,7 +47,7 @@ build it using your ftp server credentials
 # Detections
 
 
-The program has 0 detections by anti-viruses which is kinda cool.
+The program has 0 detections by anti-viruses which is kinda cool. also reduced a lot file size from 60mb to 17mb.
 
 
 ![image](https://user-images.githubusercontent.com/63863060/162635835-fd4251e9-3590-4494-8632-2240900b5833.png)
